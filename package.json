@@ -32,6 +32,12 @@
     "prep": "npm install && bower install && mkdirp dist",
     "build": "tsc",
     "test": "karma start",
-    "lint": "tslint -p . --type-check -t verbose"
+    "lint": "tslint -p . --type-check -t verbose",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true,
+  "dependencies": {
+    "snyk": "^1.316.1"
   }
 }
